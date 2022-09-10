@@ -5,17 +5,16 @@ const incrementRef = document.querySelector(
 const decrementRef = document.querySelector(
   'button[data-action = "decrement"]'
 );
-let counterValue = 5;
-counterValueRef.textContent = counterValue;
+let counterValue = 0;
 
 incrementRef.addEventListener("click", () => {
   counterValue += 1;
   console.log(counterValue);
-  return counterValue;
+  counterValueRef.textContent = counterValue;
 });
 
 decrementRef.addEventListener("click", () => {
   counterValue -= 1;
   console.log(counterValue);
-  return counterValue;
+  counterValueRef.textContent = counterValue;
 });
